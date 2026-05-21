@@ -1,0 +1,273 @@
+
+div#carousel {
+    height: 46vh; /* Mantém a altura desejada */
+    width: 100%;
+    max-height: 628px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    /* ADICIONE ESTES ESTILOS ABAIXO para garantir a exibição correta */
+    background-size: cover;       /* Força a imagem a cobrir toda a div */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    display: block;                /* Garante que se comporte como um bloco */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* Configuração do cabeçalho */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita/centro */
+  align-items: center;            /* Alinha verticalmente no meio */
+  padding: 10px 40px;             /* Espaçamento interno (ajuste o 40px para desgrudar totalmente da borda) */
+  background-color: #ffffff;      /* Cor de fundo do cabeçalho */
+}
+
+/* Controlando o tamanho da Logomarca */
+.logo-ford {
+  height: 60px;                   /* Aumente ou diminua esse valor para mudar o tamanho */
+  width: auto;                    /* Mantém a proporção da imagem sem distorcer */
+  display: block;
+}
+
+/* Ajuste opcional para o menu não ficar colado na direita se você quiser ele mais centralizado */
+.menu-links {
+  display: flex;
+  gap: 20px;                      /* Espaçamento entre as palavras do menu */
+  margin-right: auto;             /* Remova ou ajuste se quiser o menu totalmente na direita */
+  margin-left: 50px;              /* Afasta o menu da logo */
+}
+
+body {
+    background: #FFFFFF;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+
+div#carousel {
+    width: min(97%, 1800px); /* Aumenta a largura e mantém espaçamento nas laterais */
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 760px; /* Aumenta a altura para um banner maior */
+    padding: 40px 0;
+    /* Configurações da imagem de fundo */
+    background-size: cover;       /* Preenche toda a área da div sem distorcer */
+    background-position: center;  /* Centraliza o foco da imagem horizontal e verticalmente */
+    background-repeat: no-repeat; /* Evita repetições */
+    
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+    transition: all .3s ease-in-out;
+}
+
+/* Ajuste opcional para o título não ficar colado na imagem */
+/* --- CONFIGURAÇÃO DA LEGENDA FORA E ABAIXO DO BANNER --- */
+
+div#carousel-title {
+    display: block;            /* Garante que se comporte como bloco, quebrando a linha após o banner */
+    text-align: center;        /* Centraliza o texto horizontalmente na tela */
+    padding: 25px 0;           /* Cria um espaçamento elegante separando o banner da frase */
+    font-weight: bold;         /* Deixa o texto em negrito */
+    font-size: 20px;           /* Tamanho de fonte visível e adequado */
+    color: #1351d8;            /* Cor azul definida para as frases abaixo dos slides */
+    
+    /* RESET DE CONFLITOS: Remove qualquer comportamento flutuante herdado anteriormente */
+    position: relative !important; 
+    bottom: auto !important; 
+    left: auto !important; 
+    transform: none !important;
+    width: 100%;
+}
+
+/* Configuração do link dinâmico dentro da legenda */
+div#carousel-title a {
+    text-decoration: none;     /* Remove o sublinhado padrão */
+    color: inherit;            /* Herda diretamente a cor azul (#1351d8) do elemento pai */
+    font-weight: 900;          /* Dá destaque ao texto clicável */
+    background-color: transparent !important; /* Remove qualquer fundo escuro antigo */
+    padding: 0 !important;     /* Remove margens internas antigas */
+    display: inline;           /* Permite que flua como texto normal */
+}
+
+/* Efeito ao passar o mouse sobre a legenda */
+div#carousel-title a:hover {
+    color: #1351d8;            /* Escurece ligeiramente o tom de azul no hover */
+    text-decoration: underline; /* Adiciona o sublinhado apenas ao interagir */
+}
+
+
+header ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ul {
+	display: inline-block;
+}
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    vertical-align: middle;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80vw;
+}
+
+header nav a {
+    color: #1351d8;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+header nav a:hover {
+    color: #1351d8;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+}
+
+main {
+    min-height: calc(100% - 167px);
+}
+
+nav#social {
+    display: inline;
+    width: 80%;
+}
+
+nav#social ul img {
+    width: 28px;
+}
+
+span.redesociais {
+    color: #ffffff;
+    vertical-align: super;
+}
+
+footer {
+    background: #1351d8;
+    padding: 20px;
+}
+
+footer div {
+        display: inline;
+        float: right;
+        margin-right: 40px;
+}
+
+button:hover {
+        background: #1351d8;
+}
+button {
+        background: #1351d8;
+        color: #fff;
+        border: 0px;
+        border-radius: 10px;
+}
+
+.carousel-container {
+    position: relative; /* Essencial para que as setas fiquem presas aqui dentro */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#carousel {
+    width: 100%;
+    min-height: 560px;
+}
+
+
+/* Estilo comum para ambos os botões - posicionados sobre o carrossel principal */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    background-color: rgba(18, 18, 19, 0.5); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    padding: 1% 24px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+/* Posiciona a seta de voltar na esquerda e a de avançar na direita */
+.prev-btn { 
+    left: 8px;
+}
+.next-btn { 
+    right: 8px;
+}
+
+/* Efeito visual ao passar o mouse */
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(24, 47, 151, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.logo {
+    position: fixed;   /* Fixa o elemento em relação à tela do navegador */
+    top: 15px;         /* Distância do topo da página */
+    left: 20px;        /* Distância do canto esquerdo da página */
+    width: 120px;      /* Define o tamanho maior para a logo */
+    height: auto;      /* Mantém a proporção da imagem */
+    z-index: 1000;     /* Garante que a logo fique por cima de qualquer outra imagem ou carrossel */
+}
+
+/* --- CONFIGURAÇÃO DO MENU (CENTRALIZAR E AUMENTAR) --- */
+
+/* 1. Centraliza o menu na largura da tela */
+header nav {
+    display: flex;
+    justify-content: center; 
+    width: 100%;             
+    margin-top: 20px;        /* Da um espaço entre o topo e o menu */
+}
+
+/* 2. Coloca os links lado a lado e afasta um do outro */
+header nav ul {
+    display: flex;
+    list-style: none;        
+    padding: 0;
+    margin: 0;
+    gap: 40px;               /* Espaço entre as palavras */
+}
+
+/* 3. Aumenta o tamanho da letra e formata o texto */
+header nav ul li a {
+    font-size: 24px;         /* Aqui você aumenta ou diminui o tamanho */
+    font-weight: bold;       /* Deixa em negrito */
+    text-decoration: none;   /* Remove o sublinhado dos links */
+    color: #1351d8;          /* Cor azul do texto */
+}
