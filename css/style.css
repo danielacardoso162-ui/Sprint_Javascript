@@ -40,10 +40,11 @@ div#carousel {
   margin-left: 50px;              /* Afasta o menu da logo */
 }
 
-body {
+body { 
     background: #FFFFFF;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+   
 }
 
 html {
@@ -155,6 +156,7 @@ nav li {
 }
 
 main {
+    justify-content: center;
     min-height: calc(100% - 167px);
 }
 
@@ -202,8 +204,19 @@ button {
 }
 
 #carousel {
-    width: 100%;
-    min-height: 560px;
+    /* Ajuste esses valores para o tamanho que você desejar */
+    width: 80%;          /* Aumenta a largura (ex: 80% da tela ou 1000px) */
+    height: 1500px;       /* Define uma altura fixa para a imagem aparecer bem */
+    
+    /* Centraliza o bloco do carrossel na horizontal */
+    margin: 0 auto;      
+    
+    /* Garante que o fundo se comporte bem enquanto o JS carrega */
+    background-repeat: no-repeat;
+    
+    /* Opcional: borda arredondada ou sombra para um visual melhor */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
 }
 
 

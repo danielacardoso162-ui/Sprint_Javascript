@@ -52,3 +52,173 @@ button {
 .titulo {
     margin-left: 8px;
 }
+ 
+
+/* --- Ajuste Estrutural de Centralização --- */
+
+/* Transforma o container principal em Flexbox para alinhar a imagem e o formulário lado a lado no centro */
+main {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente o bloco completo na página */
+    align-items: center;      /* Centraliza verticalmente a imagem com o formulário */
+    min-height: 70vh;         /* Garante um espaço vertical confortável na tela */
+    gap: 40px;                /* Cria um espaçamento perfeito entre a imagem e o formulário */
+}
+
+/* Remove o inline-block antigo para não quebrar o layout Flexbox */
+main div {
+    display: block; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* --- Elementos do Formulário (.fordform) --- */
+
+.fordform {
+    display: block;
+    width: 380px;             /* Aumentado de 300px para 380px para melhor leitura e destaque */
+    border: 1px solid #cccccc;
+    border-radius: 8px;       /* Arredondamento suave de acordo com a imagem */
+    height: 44px;             /* Aumentado de 26px para 44px para dar o porte robusto do protótipo */
+    margin: 12px 8px;         /* Ajuste sutil na margem */
+    font-size: 14px;          /* Aumentado para 14px para melhorar a legibilidade */
+    padding: 10px;            /* Aumentado o preenchimento interno */
+    box-sizing: border-box;   /* CRÍTICO: Garante que padding e border não alterem a largura final */
+}
+
+/* Alinhamento do Select com os Inputs */
+select.fordform {
+    width: 380px;             /* Mesma largura idêntica aos inputs */
+    height: 44px;             /* Mesma altura idêntica aos inputs */
+    color: #807d7d;
+    background-color: #fff;
+}
+
+/* --- Focus states --- */
+input:focus-visible,
+select:focus-visible {
+    outline: none;
+    border-color: #104ed8;    /* Dá um destaque azul suave ao clicar no campo */
+}
+
+/* --- Títulos --- */
+h2 {
+    text-align: left;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    margin-bottom: 5px;
+}
+
+.titulo {
+    margin-left: 8px;
+}
+
+/* --- Botão "Enviar" (Passo 8 e 9) --- */
+/* --- Botão "Enviar" (Passo 8 e 9) --- */
+button {
+    display: block;
+    width: 200px;             /* Reduzido para corresponder à proporção da imagem */
+    height: 44px;             /* Altura confortável combinando com os inputs */
+    background-color: #104ed8;/* Azul Ford oficial */
+    color: white;
+    border: none;
+    border-radius: 8px;       /* Bordas arredondadas combinando com os inputs */
+    font-size: 15px;
+    font-weight: 500;         /* Texto com peso médio, exatamente como na imagem */
+    cursor: pointer;
+    
+    /* Alinhamento à direita */
+    margin: 15px 8px 15px auto; /* O 'auto' na esquerda empurra o botão para a direita */
+    
+    /* Regra fundamental para a Ação 4 (Passo 9): transição suave para os efeitos visuais */
+    transition: transform 0.2s ease, background-color 0.2s ease; 
+} Reset e Configuração do Corpo --- */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Container Principal (Centralização Absoluta) --- */
+main {
+    display: flex;
+    justify-content: center;   /* Centraliza o bloco inteiro horizontalmente */
+    align-items: center;       /* Centraliza o carro e o formulário verticalmente */
+    flex-grow: 1;              /* Preenche o espaço entre o topo e o rodapé */
+    gap: 80px;                 /* Distância perfeita entre a imagem e o formulário */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* --- Blocos Internos --- */
+main > div {
+    display: block;
+}
+
+/* Estilização da área do formulário */
+.forms {
+    width: 380px;              /* Largura fixa para manter o padrão do protótipo */
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* --- Inputs e Select (Campos Modernos do Desafio) --- */
+.fordform {
+    display: block;
+    width: 100%;               /* Ocupa toda a largura da div pai (380px) */
+    height: 44px;              /* Altura robusta igual ao protótipo */
+    margin-bottom: 15px;       /* Espaçamento vertical entre os campos */
+    border: 1px solid #cccccc;
+    border-radius: 8px;        /* Bordas arredondadas suaves */
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;    /* Evita que o padding quebre a largura */
+}
+
+/* Ajustes específicos para a caixa de mensagem maior */
+textarea.fordform {
+    height: 100px;
+    resize: none;              /* Bloqueia o usuário de quebrar o layout puxando a caixa */
+}
+
+/* Tirar a borda preta padrão ao clicar no campo */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: #104ed8;     /* Destaque azul Ford ao selecionar */
+}
+
+/* --- Botão Enviar (Passo 8 e 9) --- */
+button {
+    display: block;
+    width: 200px;              /* Tamanho proporcional (não ocupa a tela toda) */
+    height: 44px;
+    background-color: #104ed8; /* Azul Oficial */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    /* Alinhamento perfeito à direita do formulário */
+    margin: 20px 0 0 auto;     /* O 'auto' na esquerda joga o botão para a direita */
+    
+    /* Passo 9: Transição suave para os efeitos de animação */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Passo 9: Efeito Hover (passar o mouse) */
+button:hover {
+    transform: scale(1.05);    /* Aumenta ligeiramente de tamanho */
+    background-color: #0b3cb3; /* Escurece o azul */
+}

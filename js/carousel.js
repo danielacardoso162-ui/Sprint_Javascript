@@ -76,3 +76,4 @@ class Carousel {
 window.mudarSlide = function(n){
     if (n > 0) Carousel.Next(); else Carousel.Prev();
 };
+ 

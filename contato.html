@@ -38,16 +38,56 @@
             <div>
                 <h2 class="titulo">Sobre Você</h2>
             <form onsubmit="Post(this);">
-                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
-                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
-                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-                <select name="contato" class="fordform" required>
-                    <option selected>COMO DESEJA SER CONTATADO</option>
-                    <option>TELEFONE</option>
-                    <option>E-MAIL</option>
-                </select>
+              <form id="form-contato" action="#" method="POST">
+    
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+    </div>
+
+    <div class="form-group">
+        <label for="tipo-contato">Tipo de Contato:</label>
+        <select id="tipo-contato" name="tipo_contato" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="elogio">Elogio</option>
+            <option value="reclamacao">Reclamação</option>
+            <option value="solicitacao">Solicitação</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+    </div>
+
+    <button type="submit" id="btn-enviar">Enviar</button>
+
+</form>/* Estilo padrão do botão */
+#btn-enviar {
+    background-color: #003399; /* Azul Ford aproximado */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Aplica a transição visual */
+}
+
+/* Efeito ao passar o mouse (Hover) */
+#btn-enviar:hover {
+    background-color: #002266; /* Altera a cor para um tom mais escuro */
+    transform: scale(1.05);    /* Aumenta levemente o tamanho do botão */
+}
             <button type="submit">Enviar</button>
             </form>
             </div>
